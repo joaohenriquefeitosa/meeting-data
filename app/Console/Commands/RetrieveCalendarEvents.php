@@ -8,6 +8,8 @@ use Illuminate\Console\Command;
 use App\Models\User;
 use App\Services\ParticipantInformation\ParticipantInformationFetcherServiceInterface;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\CalendarEventMail;
 
 class RetrieveCalendarEvents extends Command
 {
@@ -228,6 +230,11 @@ class RetrieveCalendarEvents extends Command
                 'join_from_usergems' => $internalEmails,
                 'participants' => $participants
             ];
+
+            // Queue the email for processing
+            Mail::to($user->email)->queue(new CalendarEventMail($event));
+
+            $this->info("Email queued for user: {$user->email} for event: {$event['event_title']}");
         }
     }
 

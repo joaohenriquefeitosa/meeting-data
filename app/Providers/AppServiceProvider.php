@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use App\Services\CalendarEvent\CalendarEventFetcherService;
 use App\Services\CalendarEvent\CalendarEventFetcherServiceInterface;
+use App\Services\ParticipantInformation\ParticipantInformationFetcherService;
+use App\Services\ParticipantInformation\ParticipantInformationFetcherServiceInterface;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
