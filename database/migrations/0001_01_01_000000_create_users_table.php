@@ -16,8 +16,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('access_token');
-            $table->string('refresh_token');
-            $table->bigInteger('expires');
+            $table->string('refresh_token')->nullable();
+            $table->bigInteger('expires')->nullable();
+            $table->timestamp('last_event_attended')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
