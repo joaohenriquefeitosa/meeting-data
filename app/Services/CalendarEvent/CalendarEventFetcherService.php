@@ -13,7 +13,7 @@ class CalendarEventFetcherService implements CalendarEventFetcherServiceInterfac
     private $endPoint;
 
     public function __construct() {
-        $this->endPoint = config('api_endpoints.calendar.base_url') . config('api_endpoints.calendar.events');
+        $this->endPoint = config('calendar_endpoints.calendar.base_url') . config('calendar_endpoints.calendar.events');
     }
 
 	/**
