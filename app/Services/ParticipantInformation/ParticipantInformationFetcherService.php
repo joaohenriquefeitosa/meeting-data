@@ -2,6 +2,7 @@
 
 namespace App\Services\ParticipantInformation;
 
+use App\Models\Participant;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 
@@ -38,6 +39,13 @@ class ParticipantInformationFetcherService implements ParticipantInformationFetc
      */
     public function getParticipantInformationByEmail(string $email): ?array
     {
+        $participant = Participant::where('email', $email)->first();
+
+        if ($participant) {
+            // Return the participant data from the database
+            return $participant->toArray();
+        }
+        
         try {
             $response = Http::withHeaders([
                 'Authorization' => 'Bearer ' . $this->authToken,
