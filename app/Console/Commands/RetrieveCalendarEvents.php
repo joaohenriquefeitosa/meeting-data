@@ -222,7 +222,7 @@ class RetrieveCalendarEvents extends Command
                 'company_linkedin_url' => $externalEmails[0]['information']['company']['linkedin_url'],
                 'company_size' => $externalEmails[0]['information']['company']['employees'],                
                 'event_title' => $event['title'],
-                'event_durantion' => $durationInMinutes,
+                'event_duration' => $durationInMinutes,
                 'event_start' => Carbon::parse($event['start'])->format('g:i a'),
                 'event_end' => Carbon::parse($event['end'])->format('g:i a'),
                 'join_from_usergems' => $internalEmails,

@@ -1,39 +1,3 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-    <title>Upcoming Meeting Details</title>
-</head>
-<body>
-    <h1>Meeting Details</h1>
-
-    <h2>{{ $event['event_title'] }}</h2>
-    <p><strong>Company:</strong> <a href="{{ $event['company_linkedin_url'] }}">{{ $event['company_name'] }}</a></p>
-    <p><strong>Company Size:</strong> {{ $event['company_size'] }} employees</p>
-    <p><strong>Start Time:</strong> {{ $event['event_start'] }}</p>
-    <p><strong>End Time:</strong> {{ $event['event_end'] }}</p>
-    <p><strong>Duration:</strong> {{ $event['event_durantion'] }} minutes</p>
-
-    <h3>Participants:</h3>
-    <ul>
-        @foreach($event['participants'] as $participant)
-            <li>
-                {{ $participant['full_name'] }} ({{ $participant['title'] }})
-                - <a href="{{ $participant['linkedin_url'] }}">LinkedIn</a>
-                <br>
-                Met with: {{ $participant['meets'] }}
-            </li>
-        @endforeach
-    </ul>
-
-    <h3>Internal Attendees:</h3>
-    <ul>
-        @foreach($event['join_from_usergems'] as $internal)
-            
-        @endforeach
-    </ul>
-</body>
-</html> -->
-
 @include('emails.partials.head')
 
 <body
@@ -80,7 +44,7 @@
                                                 d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
                                         </svg>
                                     </span>
-                                    ({{ $event['event_durantion'] }} min)
+                                    ({{ $event['event_duration'] }} min)
                                 </p>
                                 <p
                                     style="font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px; color: #74797f;">

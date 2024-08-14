@@ -15,7 +15,7 @@ class EmailPreviewController extends Controller
             'company_linkedin_url' => 'https://www.linkedin.com/company/algolia/',
             'company_size' => 700,                
             'event_title' => 'UserGems x Algolia',
-            'event_durantion' => 30,
+            'event_duration' => 30,
             'event_start' => '9:30 AM',
             'event_end' => '10:00 AM',
             'join_from_usergems' => [
