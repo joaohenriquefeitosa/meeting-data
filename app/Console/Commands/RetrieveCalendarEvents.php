@@ -202,11 +202,9 @@ class RetrieveCalendarEvents extends Command
                     $meets .= ' ' . implode(' & ', $meetingDetails);
                 }
                 
-
                 $participants[] = [
-                    'email' => $externalEmail['email'],
                     'status' => $externalEmail['status'],
-                    'information' => $externalEmail['information'],
+                    'avatar' => $externalEmail['information']['avatar'],
                     'full_name' => $externalEmail['information']['first_name'] . ' ' . $externalEmail['information']['first_name'],
                     'title' => $externalEmail['information']['title'],
                     'total_meetings' => $totalMeetings[0]['total_meetings'],

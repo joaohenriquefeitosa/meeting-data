@@ -1,5 +1,15 @@
 # Ticket to manage info from the sales meeting potential clients
 
+## Email Template
+
+Accessing the path:
+    
+    localhost:8080/email-preview
+
+You'll be able to see a rendering of the template with mock data.
+
+![Email Template](./email-template.png)
+
 
 ## Basic idea for Execution Flow
 
